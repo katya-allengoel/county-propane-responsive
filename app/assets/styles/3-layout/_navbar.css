@@ -5,6 +5,7 @@
     align-items:center;
     justify-content:space-between;
     border-bottom:2px solid #000;
+    flex-wrap: wrap;
 
     @mixin atMedium {
         padding:15px;
@@ -15,13 +16,58 @@
         display: block;
     }
 
-    &__right {
+    &__top{
+        width: 100%;
+        position: relative;
+
+         &__right {
         display:none;
 
         @mixin atMedium {
             display:block;
+            float:right;
+        }
+
+            &__message{
+                position: absolute;
+                top: 45px;
+                right: 40px;
+                text-transform: uppercase;
+
+                & span {
+                    display: block;
+                    color: #ffffff;
+                }
+
+            }
+        
+        }
+
+        &__left {
+            display:none;
+
+            @mixin atMedium {
+                display:block;
+                float: left;
+            }
+        }
+        
+        &:after{
+            content: '';
+            width: 100%;
+            height: 3px;
+            background-color: #0f566d;
+            display: block;
+            position: absolute;
+            bottom:27px;
+            
         }
     }
+
+   
+
+
+
 
     &__nav {
         position: fixed;
