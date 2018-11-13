@@ -1,6 +1,7 @@
 .nav {
     margin-bottom:0;
 
+
     @mixin atMedium {
         display:flex;
     }
@@ -8,36 +9,34 @@
     &__item {
         display: block;
         margin-bottom:0;
+        border-bottom: 1px solid $lightgrey;
+
+            
+
+          & > a:hover {
+            color: #ffffff;
+        }
     }
+
+     &__item:focus &__link, &__item:active &__link{            
+                background-color: $primaryColor;
+                color: white;
+        }
 
     &__link {
         position: relative;
         display: block;
-        padding:12px 0px;
-        margin:0 10px;
-        text-transform: uppercase;
-        font-weight:700;
-        font-size:0.925em;
-        color:#fff;
+        padding:12px 50px;
+        margin:0;
+        font-weight:500;
+        font-size:1em;
+        color:$grey;
 
-        &::after {
-            content:"";
-            position: absolute;
-            bottom:0;
-            left:0;
-            transform:translateY(3px);
-            width:100%;
-            height:3px;
-            display:block;
-            opacity:0.0;
-            background-color:$secondaryColor;
-            transition:all 0.35s ease;
+        &:hover{
+            background-color: $primaryColor;
         }
 
-        &:hover::after {
-            opacity:1.0;
-            transform:translateY(0);
-        }
+      
 
         @mixin atMedium {
             color:$primaryColor;

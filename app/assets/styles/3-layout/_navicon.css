@@ -19,7 +19,7 @@
       margin-bottom:5px;
       display:block;
       border-radius:5px;
-      background-color:#000;
+      background-color:$primaryColor;
       transition:all 0.25s cubic-bezier(0.57, 0.28, 0.25, 0.69);
       
       &:last-of-type {
@@ -28,7 +28,7 @@
     }
     
     &--toggle &__line {
-      background-color:#fff;
+      background-color: $primaryColor;
     }
 
     &--toggle &__line:first-of-type {
@@ -48,5 +48,11 @@
         rotate(-45deg)
         translateY(-5px)
         translateX(5px);
+    }
+
+    &--toggle + .navbar__top__left__phone-icon--on-toggle{
+      display: inline-block;
+      color: $primaryColor;
+      z-index: 999;
     }
 }

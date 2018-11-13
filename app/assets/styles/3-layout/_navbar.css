@@ -12,56 +12,86 @@
     }
 
     &__logo {
-        padding:10px 15px;
-        display: block;
+        padding:10px 5px;
+        display: inline-block;
+        max-width: 300px;
     }
 
     &__top{
         width: 100%;
         position: relative;
 
+        @mixin atMedium{
+            width: auto;
+        }
+
+
+
          &__right {
         display:none;
 
-        @mixin atMedium {
+        @mixin atLarge {
             display:block;
             float:right;
         }
 
             &__message{
                 position: absolute;
-                top: 45px;
-                right: 40px;
+                top: 33px;
+                right: 25px;
                 text-transform: uppercase;
 
                 & span {
                     display: block;
                     color: #ffffff;
+
+                    & a {
+                        color: #ffffff;
+                    }
                 }
+
+
 
             }
         
         }
 
         &__left {
-            display:none;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
 
             @mixin atMedium {
                 display:block;
                 float: left;
             }
+
+           &__phone-icon {
+            display:inline-block;
+            font-size:21px;
+            line-height:18px;
+            padding:10px 13px;
+            
+                &--on-toggle{
+                    display: none;
+                }
+
+            }  
         }
         
-        &:after{
-            content: '';
-            width: 100%;
-            height: 3px;
-            background-color: #0f566d;
-            display: block;
-            position: absolute;
-            bottom:27px;
-            
-        }
+        @mixin atLarge{
+            &:after{
+                content: '';
+                width: 100%;
+                height: 3px;
+                background-color: $primaryColor;
+                display: block;
+                position: absolute;
+                bottom:27px;
+
+            }
+         }
     }
 
    
@@ -72,20 +102,33 @@
     &__nav {
         position: fixed;
         top:0;
-        left:0;
-        right:0;
+        left:auto;
+        right:-100%;
         bottom:0;
         z-index:998;
-        background-color:#000;
+        background-color:#ffffff;
+        color: $grey;
         display:block;
-        padding:25px 50px;
-        opacity:0.0;
-        visibility:hidden;
-        transition:all 0.3s ease;
+        padding:25px 0;
+        transition:all 0.5s ease;
+
+
 
         &--is-open {
-            opacity:1.0;
-            visibility:visible;
+            right:0;
+            padding-top: 70px;
+
+            &:before{
+                content:"";
+                position: absolute;
+                right:100%;
+                width: 200%;
+                height: 100%;
+                top:0;
+                background-color: rgba(0,0,0,0.2);
+                display: block;
+            }
+                
         }
 
         @mixin atMedium {
@@ -95,8 +138,6 @@
             right:auto;
             bottom:auto;
             z-index:998;
-            opacity:1.0;
-            visibility:visible;
             background-color:transparent;
             display:block;
             display:inline-block;
@@ -105,16 +146,22 @@
     }
 
     &__mobile-buttons {
+        font-size: 30px;
+        margin: 0 15px;
+        color: $primaryColor;
+
         @mixin atMedium {
-            display:none;
+            display:none!important;
+        }
+
+        &.navicon--toggle{
+            display: block;
+            
+
+           
         }
     }
 
-    &__phone-icon {
-        display:inline-block;
-        font-size:21px;
-        line-height:18px;
-        padding:10px 13px;
-    }
+   
 
 }
