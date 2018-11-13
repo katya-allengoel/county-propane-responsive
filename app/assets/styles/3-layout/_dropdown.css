@@ -18,7 +18,8 @@
     }
 
     &__toggle-icon {
-        transition:all 0.3s ease
+        transition:all 0.3s ease;
+        color: $primaryColor;
     }
 
 
@@ -33,31 +34,45 @@
         padding: 10px 0;
         margin: 0;
 
-        @mixin atMedium {
+        @mixin atLarge {
             position: absolute;
             display:block;
             opacity:0.0;
             visibility:hidden;
-            border-radius:0 0 5px 5px;
+            border-radius:0 0 0px 0px;
 			overflow:hidden;
 			background-color:#fff;
-            box-shadow:0 10px 25px rgba(0,0,0,0.35);
+            box-shadow:0 0px 6px rgba(0,0,0,0.35);
             transform:translateY(-20px);
-            width:225px;
+            width:205px;
 
         }
     }
+
+
 
     &--is-open &__nav {
         display:block;
         opacity:1.0;
         visibility:visible;
         background-color: #f1f2f2;
+        padding-top: 45px;
+        margin-top: -30px;
+        z-index: 999;
     }
+
+
 
     &--is-open &__toggle{            
             background-color: $primaryColor;
             color: white;
+
+        @mixin atLarge{
+            background:transparent;
+            color: #000000;
+            z-index: 9999;
+        }
+
     }
 
     &__item {
@@ -87,15 +102,15 @@
             opacity:0.5;
         }
 
-        @mixin atMedium {
+        @mixin atLarge {
             margin:0;
-            padding:12px 15px;
-			font-size:0.835em;
-			color:black;
+            padding:5px 26px;
+			font-size:0.9em;
+			color: $primaryColor;
 
             &:hover {
-                background-color:#000;
-                opacity:1.0;
+                background-color:transparent;
+                color: $orange;
             }
         }
     }

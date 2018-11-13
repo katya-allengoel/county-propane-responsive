@@ -7,32 +7,41 @@
     border-bottom:2px solid #000;
     flex-wrap: wrap;
 
-    @mixin atMedium {
-        padding:15px;
+    @mixin atLarge {
+        padding:0px;
     }
 
     &__logo {
         padding:10px 5px;
         display: inline-block;
         max-width: 300px;
+
+        @mixin atLarge{
+            max-width: 332px;
+            position: relative;
+            top: 7px;
+        }
     }
 
     &__top{
         width: 100%;
         position: relative;
 
-        @mixin atMedium{
-            width: auto;
-        }
+        @mixin atLarge{
+            width: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: space-between;
 
-
+                    }
 
          &__right {
         display:none;
 
         @mixin atLarge {
             display:block;
-            float:right;
+            z-index: 2;
+           
         }
 
             &__message{
@@ -62,9 +71,9 @@
               align-items: center;
 
 
-            @mixin atMedium {
+            @mixin atLarge {
                 display:block;
-                float: left;
+               
             }
 
            &__phone-icon {
@@ -88,7 +97,7 @@
                 background-color: $primaryColor;
                 display: block;
                 position: absolute;
-                bottom:27px;
+                bottom:17px;
 
             }
          }
@@ -110,38 +119,32 @@
         color: $grey;
         display:block;
         padding:25px 0;
-        transition:all 0.5s ease;
+        transition:all 0.25s ease;
+        opacity: 0.0;
 
 
 
         &--is-open {
             right:0;
+            opacity: 1;
             padding-top: 70px;
 
-            &:before{
-                content:"";
-                position: absolute;
-                right:100%;
-                width: 200%;
-                height: 100%;
-                top:0;
-                background-color: rgba(0,0,0,0.2);
-                display: block;
-            }
+         
                 
         }
 
-        @mixin atMedium {
+        @mixin atLarge {
             position: relative;
             top:auto;
             left:auto;
             right:auto;
             bottom:auto;
             z-index:998;
-            background-color:transparent;
-            display:block;
-            display:inline-block;
-            justify-self:center;
+            width: 100%;
+            background-color:#e4e4e4;
+            display:flex;
+            justify-content:space-around;
+            opacity: 1;
         }
     }
 
@@ -150,7 +153,7 @@
         margin: 0 15px;
         color: $primaryColor;
 
-        @mixin atMedium {
+        @mixin atLarge {
             display:none!important;
         }
 

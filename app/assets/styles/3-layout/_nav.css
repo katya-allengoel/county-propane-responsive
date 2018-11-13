@@ -2,7 +2,7 @@
     margin-bottom:0;
 
 
-    @mixin atMedium {
+    @mixin atLarge {
         display:flex;
     }
 
@@ -10,17 +10,30 @@
         display: block;
         margin-bottom:0;
         border-bottom: 1px solid $lightgrey;
-
+        
+        @mixin atLarge{
+            border-bottom: none;
+        }
             
 
           & > a:hover {
             color: #ffffff;
+
+            @mixin atLarge{
+               color: $orange;
+               background: transparent;
+
+            }
         }
     }
 
      &__item:focus &__link, &__item:active &__link{            
                 background-color: $primaryColor;
                 color: white;
+
+                @mixin atLarge{
+                    background: transparent;
+                }
         }
 
     &__link {
@@ -34,12 +47,18 @@
 
         &:hover{
             background-color: $primaryColor;
+            
+            @mixin atLarge{
+             
+            }
+            
         }
 
       
 
-        @mixin atMedium {
-            color:$primaryColor;
+        @mixin atLarge {
+            color: #000;
+            padding: 12px 25px;
         }
 
     }
