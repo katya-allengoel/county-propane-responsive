@@ -1,4 +1,5 @@
-var path = require('path');
+var path = require('path'),
+webpack = require('webpack');
 
 module.exports = {
     entry: {
@@ -20,5 +21,13 @@ module.exports = {
                 exclude: /node_modules/
             }
         ]
-    }
+    },
+    
+    plugins: [
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery"
+        })
+    ],
 }

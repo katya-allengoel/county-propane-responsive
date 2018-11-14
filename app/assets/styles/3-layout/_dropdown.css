@@ -20,8 +20,7 @@
     &__toggle-icon {
         transition:all 0.3s ease;
         color: $primaryColor;
-       position:absolute;
-        right: 5px;
+      
 
         
         @mixin atLarge{
@@ -33,6 +32,11 @@
 
     &--is-open &__toggle-icon {
         transform:rotate(-180deg);
+        color: #fff;
+
+        @mixin atLarge{
+            color: $primaryColor;
+        }
     }
 
     &__nav {

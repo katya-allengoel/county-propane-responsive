@@ -47,10 +47,16 @@
 
         &:hover{
             background-color: $primaryColor;
+
+                & > i {
+                    color: #fff;
+
+                      @mixin atLarge{
+                        color: $orange;
+                    }
+                }
             
-            @mixin atLarge{
-             
-            }
+          
             
         }
 
