@@ -7,6 +7,22 @@
 		display: inline-block;
 		float: left;
 
+		&__list{
+
+			& li a {
+				color: #ffffff;
+
+				&:hover, &:focus, &:active{
+					color: $orange;
+				}
+			}
+
+			& > li:first-of-type{
+			font-weight: 700;
+			color: #ffffff;
+			} 
+		}
+
 
 		@mixin atSmall{
 			width: 50%;

@@ -11,6 +11,10 @@
 	&--no-padding {
 		padding:0px!important;
 	}
+
+	&--no-padding-bottom {
+		padding-bottom:0px!important;
+	}
 	
 	&--small {
 		padding-top:30px;

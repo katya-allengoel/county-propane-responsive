@@ -39,15 +39,10 @@
     }
 
     &__image {
-       
-
         & img{
                 width: 100%;
-               
             }
     }
-
-       
 
     &__button{
         position: absolute;
@@ -59,6 +54,7 @@
         text-transform: uppercase;
         background-color: rgba(15, 86, 109, 0.7);
         transition: all ease 0.25s;
+        font-style: italic;
 
         & i{
             transition: all ease 0.25s;

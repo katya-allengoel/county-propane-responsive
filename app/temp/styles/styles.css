@@ -2013,7 +2013,7 @@ h3,
 h4,
 h5,
 h6 {
-    color:#000;
+    color:#0f566d;
     font-weight:800;
     font-family: 'Roboto', sans-serif;
 }
@@ -2846,7 +2846,6 @@ p {
 
 .box__image img{
                 width: 100%;
-               
             }
 
 .box__button{
@@ -2860,6 +2859,7 @@ p {
         background-color: rgba(15, 86, 109, 0.7);
         -webkit-transition: all ease 0.25s;
         transition: all ease 0.25s;
+        font-style: italic;
     }
 
 .box__button i{
@@ -2945,9 +2945,9 @@ p {
             }
 
 .btn {
-    min-width:225px;
+    width:100%;
     padding:14px 20px;
-    border-radius:3px;
+    border-radius:0px;
 	border:0;
 	display: inline-block;
     color:#fff;
@@ -2960,6 +2960,21 @@ p {
     -webkit-transition:all 0.2s ease;
     transition:all 0.2s ease;
 }
+
+@media (min-width:576px) {
+
+.btn {
+    	width: auto;
+    	min-width: 225px
+}
+    }
+
+.btn:hover{
+    	-webkit-transform: translateY(-2px);
+    	        transform: translateY(-2px);
+    	-webkit-box-shadow: 0 15px 35px 0 rgba(0,0,0,0.12);
+    	        box-shadow: 0 15px 35px 0 rgba(0,0,0,0.12);
+    }
 
 .btn--primary {
 		background-color:#0f566d;
@@ -3016,6 +3031,47 @@ p {
 			color:#000;
 		}
 
+.btn--green{
+		background-color: #039746;
+	}
+
+.btn--red{
+		background-color: #e31b22;
+	}
+
+.btn--blue{
+		background-color: #355392;
+	}
+
+.btn--glare{
+		position: relative;
+		color: #ffffff;
+
+	}
+
+.btn--glare:after{
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 50%;
+			top:0;
+			left:0;
+			background-color: rgba(255,255,255,0.15);
+			-webkit-transition: all ease 0.25s;
+			transition: all ease 0.25s;
+
+			
+		}
+
+.btn--glare:hover{
+			color: #fff;
+		}
+
+.btn--glare:hover:after{
+				height: 100%;
+				background-color: rgba(255,255,255,0.05);
+			}
+
 .btn--full {
 		width:100%;
 	}
@@ -3034,8 +3090,20 @@ p {
 		min-width:auto;
 	}
 
-.btn--icon-left > .fa {
-			margin-right:10px;
+.btn--icon-left {
+		text-align: left;
+		padding-left: 70px;
+		text-transform: none;
+	}
+
+.btn--icon-left > i {
+			display: block;
+		}
+
+.btn--icon-left > img {
+			position: absolute;
+			left: 20px;
+			max-height: 50px;
 		}
 
 .btn--icon-right > .fa {
@@ -3047,29 +3115,22 @@ p {
 }
 
 .figure > img {
-        border-radius:6px;
-        -webkit-box-shadow:0 5px 15px rgba(0,0,0,0.06);
-                box-shadow:0 5px 15px rgba(0,0,0,0.06);
+        border-radius:0px;
+      /*  box-shadow:0 5px 15px rgba(0,0,0,0.06);*/
     }
 
 .figure > figcaption {
-        position: relative;
+        position: absolute;
         z-index:2;
-        -webkit-transform:
-            translateY(-25px)
-            translateX(10px);
-                transform:
-            translateY(-25px)
-            translateX(10px);
-        background-color:#fff;
-        -webkit-box-shadow:0 10px 25px 0 rgba(0,0,0,0.12);
-                box-shadow:0 10px 25px 0 rgba(0,0,0,0.12);
+        background-color: #0f566d;
         padding:10px 15px;
         max-width:90%;
         float:right;
         font-size:0.875em;
-        font-style:italic;
-        color:#888;
+        color:#fff;
+        text-transform: uppercase;
+        bottom:0;
+        right:0;
     }
 
 .footer{
@@ -3082,6 +3143,19 @@ p {
 		display: inline-block;
 		float: left;
 	}
+
+.footer__box__list li a {
+				color: #ffffff;
+			}
+
+.footer__box__list li a:hover, .footer__box__list li a:focus, .footer__box__list li a:active{
+					color: #b95e00;
+				}
+
+.footer__box__list > li:first-of-type{
+			font-weight: 700;
+			color: #ffffff;
+			}
 
 @media (min-width:576px) {
 
@@ -3210,6 +3284,10 @@ p {
 		padding:0px!important;
 	}
 
+.section--no-padding-bottom {
+		padding-bottom:0px!important;
+	}
+
 .section--small {
 		padding-top:30px;
 		padding-bottom:30px;
@@ -3293,6 +3371,36 @@ p {
 	.section--dark h6  {
 		color:#fff;
 	}
+
+.sidebar {
+	width: 100%;
+
+	
+}
+
+@media (min-width:576px) {
+
+.sidebar {
+		max-width: 400px
+
+	
+}
+    }
+
+.sidebar > .btn {
+		margin-bottom: 20px;
+		width: 100%;
+		display: inline-block;
+	}
+
+.sidebar figure {
+
+		margin-bottom: 30px;
+	}
+
+.sidebar figure > img {
+		width: 100%;
+		}
 
 .square-gallery {
 	display:-webkit-box;

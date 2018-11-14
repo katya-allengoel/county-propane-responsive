@@ -1,0 +1,24 @@
+.sidebar {
+	width: 100%;
+
+	@mixin atSmall {
+		max-width: 400px;
+	}
+
+	& > .btn {
+		margin-bottom: 20px;
+		width: 100%;
+		display: inline-block;
+	}
+
+	& figure {
+
+		margin-bottom: 30px;
+
+		& > img {
+		width: 100%;
+		}
+	}
+
+	
+}
