@@ -2,6 +2,7 @@
   "name": "county-propane",
   "version": "1.0.0",
   "dependencies": {
+    "flickity": "^2.1.2",
     "font-awesome": "^4.7.0",
     "jquery": "3.2.1",
     "jquery-smooth-scroll": "^2.2.0",

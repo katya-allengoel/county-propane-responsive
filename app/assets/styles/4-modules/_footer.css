@@ -1,0 +1,23 @@
+.footer{
+
+	overflow: auto;
+
+	&__box{
+		width: 100%;
+		display: inline-block;
+		float: left;
+
+
+		@mixin atSmall{
+			width: 50%;
+		}
+
+		@mixin atMedium {
+			width: 33%;
+		}
+
+		@mixin atLarge {
+			width: 20%;
+		}
+	}
+}

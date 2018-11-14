@@ -38,7 +38,7 @@
 	}
 
 	&--gradient-primary {
-		background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+		background:  linear-gradient(135deg, #09475b 0%,#073646 100%);;
 	}
 
 	&--dark {
@@ -59,6 +59,13 @@
 		background-size:cover;
 		background-repeat:no-repeat;
 		background-position:center center;
+	}
+
+	&--page-background{
+	   background: linear-gradient(to bottom, rgba(92,140,155,1) 0%,rgba(255,255,255,0.6) 40%,rgba(255,255,255,0) 100%); 
+	   background-repeat-y: no-repeat;
+	   background-size: 100% 500px;
+
 	}
 
 	&--gradient-primary p,
