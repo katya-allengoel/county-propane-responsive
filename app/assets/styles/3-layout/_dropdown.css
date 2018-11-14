@@ -20,6 +20,14 @@
     &__toggle-icon {
         transition:all 0.3s ease;
         color: $primaryColor;
+       position:absolute;
+        right: 5px;
+
+        
+        @mixin atLarge{
+            
+        }
+        
     }
 
 
@@ -56,9 +64,13 @@
         opacity:1.0;
         visibility:visible;
         background-color: #f1f2f2;
-        padding-top: 45px;
+      
+
+        @mixin atLarge{
+              padding-top: 45px;
         margin-top: -30px;
         z-index: 999;
+        }
     }
 
 

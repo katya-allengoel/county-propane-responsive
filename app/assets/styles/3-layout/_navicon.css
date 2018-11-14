@@ -52,6 +52,8 @@
 
     &--toggle + .navbar__top__left__phone-icon--on-toggle{
       display: inline-block;
+      position: fixed;
+      right: 30px;
       color: $primaryColor;
       z-index: 999;
     }

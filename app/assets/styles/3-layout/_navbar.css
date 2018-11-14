@@ -6,6 +6,9 @@
     justify-content:space-between;
     border-bottom:2px solid #000;
     flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    z-index: 999;
 
     @mixin atLarge {
         padding:0px;
@@ -15,6 +18,10 @@
         padding:10px 5px;
         display: inline-block;
         max-width: 300px;
+
+        & + .navicon--toggle {
+
+        }
 
         @mixin atLarge{
             max-width: 332px;
@@ -124,6 +131,7 @@
 
 
 
+
         &--is-open {
             right:0;
             opacity: 1;
@@ -145,6 +153,7 @@
             display:flex;
             justify-content:space-around;
             opacity: 1;
+            margin-top: 10px;
         }
     }
 
@@ -159,12 +168,41 @@
 
         &.navicon--toggle{
             display: block;
+            position:fixed;
+            right: 0;
             
 
            
         }
     }
 
-   
+   &--fixed{
+    position:fixed;
+    padding: 5px 0;
+    
+    & .navbar__logo{
+        max-width: 200px;
+    }
+   }
+
+    &__tagline{
+        display: none;
+        color: $primaryColor;
+        font-size: 0.8em;
+        position:absolute;
+        bottom:-5px;
+
+            &--left{
+                left: 77px;
+            }
+
+            &--right{
+                right:5px;
+            }
+
+        @mixin atLarge{
+            display: block;
+        }
+    }
 
 }

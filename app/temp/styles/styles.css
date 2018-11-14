@@ -2189,6 +2189,12 @@ p {
         -webkit-transition:all 0.3s ease;
         transition:all 0.3s ease;
         color: #0f566d;
+       position:absolute;
+        right: 5px;
+        
+    }
+
+@media (min-width:992px) {
     }
 
 .dropdown--is-open .dropdown__toggle-icon {
@@ -2228,9 +2234,15 @@ p {
         opacity:1.0;
         visibility:visible;
         background-color: #f1f2f2;
-        padding-top: 45px;
+    }
+
+@media (min-width:992px) {
+
+.dropdown--is-open .dropdown__nav {
+              padding-top: 45px;
         margin-top: -30px;
-        z-index: 999;
+        z-index: 999
+    }
     }
 
 .dropdown--is-open .dropdown__toggle{            
@@ -2388,8 +2400,9 @@ p {
     border-bottom:2px solid #000;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-
-   
+    position: relative;
+    width: 100%;
+    z-index: 999;
 
 }
 
@@ -2397,8 +2410,6 @@ p {
 
 .navbar {
         padding:0px
-
-   
 
 }
     }
@@ -2408,6 +2419,10 @@ p {
         display: inline-block;
         max-width: 300px;
     }
+
+.navbar__logo + .navicon--toggle {
+
+        }
 
 @media (min-width:992px) {
 
@@ -2556,7 +2571,8 @@ p {
             display:flex;
             -ms-flex-pack:distribute;
                 justify-content:space-around;
-            opacity: 1
+            opacity: 1;
+            margin-top: 10px
     }
     }
 
@@ -2575,10 +2591,44 @@ p {
 
 .navbar__mobile-buttons.navicon--toggle{
             display: block;
+            position:fixed;
+            right: 0;
             
 
            
         }
+
+.navbar--fixed{
+    position:fixed;
+    padding: 5px 0;
+   }
+
+.navbar--fixed .navbar__logo{
+        max-width: 200px;
+    }
+
+.navbar__tagline{
+        display: none;
+        color: #0f566d;
+        font-size: 0.8em;
+        position:absolute;
+        bottom:-5px;
+    }
+
+.navbar__tagline--left{
+                left: 77px;
+            }
+
+.navbar__tagline--right{
+                right:5px;
+            }
+
+@media (min-width:992px) {
+
+.navbar__tagline{
+            display: block
+    }
+    }
 
 .navicon {
     position:relative;
@@ -2645,6 +2695,8 @@ p {
 
 .navicon--toggle + .navbar__top__left__phone-icon--on-toggle{
       display: inline-block;
+      position: fixed;
+      right: 30px;
       color: #0f566d;
       z-index: 999;
     }
@@ -2836,6 +2888,7 @@ p {
         margin:0 0 20px 0;
         font-size:1.5em;
         font-weight:500;
+        color: #000;
     }
 
 .box__text {
