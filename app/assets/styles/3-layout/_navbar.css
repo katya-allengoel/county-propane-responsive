@@ -17,17 +17,33 @@
     &__logo {
         padding:10px 5px;
         display: inline-block;
-        max-width: 300px;
+        text-align: center;
+        width: 100%;
+
+        @mixin atLarge{
+            width: auto;
+        }
+
+        & img{
+            max-width: 300px;
+            padding: 0 40px;
+            width: 100%;
+            transition: all ease 0.25s;
+
+             @mixin atLarge{
+                max-width: 332px;
+                position: relative;
+                top: 7px;
+                padding: 0;
+            }
+        }
 
         & + .navicon--toggle {
 
         }
+        
 
-        @mixin atLarge{
-            max-width: 332px;
-            position: relative;
-            top: 7px;
-        }
+       
     }
 
     &__top{
@@ -73,19 +89,17 @@
         }
 
         &__left {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
+              display: inline-block;
+              width:100%;
 
 
             @mixin atLarge {
                 display:block;
-               
+               width: auto;
             }
 
            &__phone-icon {
             display:inline-block;
-            font-size:21px;
             line-height:18px;
             padding:10px 13px;
             
@@ -94,6 +108,7 @@
                 }
 
             }  
+
         }
         
         @mixin atLarge{
@@ -136,7 +151,7 @@
             right:0;
             opacity: 1;
             padding-top: 70px;
-
+        
          
                 
         }
@@ -161,29 +176,57 @@
         font-size: 30px;
         margin: 0 15px;
         color: $primaryColor;
+        position: absolute;
+        top: 20px;
 
         @mixin atLarge {
             display:none!important;
         }
 
         &.navicon--toggle{
-            display: block;
+            display: inline-block;
             position:fixed;
             right: 0;
+            top: 31px;
             
 
            
         }
     }
 
+ 
+
    &--fixed{
     position:fixed;
-    padding: 5px 0;
+    padding: 0;
+        
+        & .navbar__nav{
+              @mixin atLarge{
+                padding: 5px 0;
+            }
+        }
     
-    & .navbar__logo{
-        max-width: 200px;
+    & .navbar__mobile-buttons{
+        top: 4px;
     }
+    
+       
+    
+    & .navbar__logo img{
+        max-width: 200px;
+        
+    @mixin atLarge{
+        max-width: 332px;
+    }
+
+    }
+
+
+
+
    }
+
+  
 
     &__tagline{
         display: none;

@@ -13,6 +13,27 @@
   		background-repeat: no-repeat;
   		background-size: cover;
 	}
+
+	
+
 }
 
+.flickity-page-dots{
+
+	@mixin atMedium{
+		bottom: -40px;
+	}
+}
+
+.flickity-page-dots .dot{
+		border: 1px solid #0f566d;
+		background: transparent;
+		opacity: 1;
+		width: 12px;
+		height: 12px;
+	}
+
+.flickity-page-dots .dot.is-selected{
+	background-color: #0f566d;
+}	
 

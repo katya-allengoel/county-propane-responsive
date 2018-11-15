@@ -1,5 +1,6 @@
 .navicon {
-    position:relative;
+    position:absolute;
+    right: 0;
     z-index:999;
     border:none;
     background-color:transparent;
@@ -52,8 +53,7 @@
 
     &--toggle + .navbar__top__left__phone-icon--on-toggle{
       display: inline-block;
-      position: fixed;
-      right: 30px;
+      right: 40px;
       color: $primaryColor;
       z-index: 999;
     }

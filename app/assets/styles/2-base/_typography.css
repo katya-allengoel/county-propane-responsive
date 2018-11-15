@@ -24,7 +24,7 @@ h1,
     text-transform: uppercase;
     letter-spacing: -1px;
     @mixin atMedium {
-        font-size:3em;
+        font-size:2.5em;
     }
 }
 

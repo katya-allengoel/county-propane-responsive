@@ -2126,6 +2126,9 @@ https://flickity.metafizzy.co
 .banner__slider {
 	height: 100%;
 	width: 100%;
+
+	
+
 }
 
 .banner__slider__slide{
@@ -2134,6 +2137,25 @@ https://flickity.metafizzy.co
   		background-repeat: no-repeat;
   		background-size: cover;
 	}
+
+@media (min-width:768px) {
+
+.flickity-page-dots{
+		bottom: -40px
+}
+    }
+
+.flickity-page-dots .dot{
+		border: 1px solid #0f566d;
+		background: transparent;
+		opacity: 1;
+		width: 12px;
+		height: 12px;
+	}
+
+.flickity-page-dots .dot.is-selected{
+	background-color: #0f566d;
+}
 
 body {
     font-size:16px;
@@ -2186,7 +2208,7 @@ h1,
 
 h1,
 .h1 {
-        font-size:3em
+        font-size:2.5em
 }
     }
 
@@ -2590,21 +2612,44 @@ p {
 .navbar__logo {
         padding:10px 5px;
         display: inline-block;
-        max-width: 300px;
+        text-align: center;
+        width: 100%;
+        
+
+       
+    }
+
+@media (min-width:992px) {
+
+.navbar__logo {
+            width: auto
+        
+
+       
+    }
+    }
+
+.navbar__logo img{
+            max-width: 300px;
+            padding: 0 40px;
+            width: 100%;
+            -webkit-transition: all ease 0.25s;
+            transition: all ease 0.25s;
+        }
+
+@media (min-width:992px) {
+
+.navbar__logo img{
+                max-width: 332px;
+                position: relative;
+                top: 7px;
+                padding: 0
+        }
     }
 
 .navbar__logo + .navicon--toggle {
 
         }
-
-@media (min-width:992px) {
-
-.navbar__logo {
-            max-width: 332px;
-            position: relative;
-            top: 7px
-    }
-    }
 
 .navbar__top{
         width: 100%;
@@ -2660,27 +2705,22 @@ p {
                     }
 
 .navbar__top__left {
-              display: -webkit-box;
-              display: -ms-flexbox;
-              display: flex;
-              -webkit-box-pack: justify;
-                  -ms-flex-pack: justify;
-                      justify-content: space-between;
-              -webkit-box-align: center;
-                  -ms-flex-align: center;
-                      align-items: center;  
+              display: inline-block;
+              width:100%;  
+
         }
 
 @media (min-width:992px) {
 
 .navbar__top__left {
-                display:block  
+                display:block;
+               width: auto  
+
         }
     }
 
 .navbar__top__left__phone-icon {
             display:inline-block;
-            font-size:21px;
             line-height:18px;
             padding:10px 13px;
 
@@ -2723,7 +2763,7 @@ p {
             right:0;
             opacity: 1;
             padding-top: 70px;
-
+        
          
                 
         }
@@ -2753,6 +2793,8 @@ p {
         font-size: 30px;
         margin: 0 15px;
         color: #0f566d;
+        position: absolute;
+        top: 20px;
     }
 
 @media (min-width:992px) {
@@ -2763,9 +2805,10 @@ p {
     }
 
 .navbar__mobile-buttons.navicon--toggle{
-            display: block;
+            display: inline-block;
             position:fixed;
             right: 0;
+            top: 31px;
             
 
            
@@ -2773,11 +2816,35 @@ p {
 
 .navbar--fixed{
     position:fixed;
-    padding: 5px 0;
+    padding: 0;
+
+
+
+
    }
 
-.navbar--fixed .navbar__logo{
+@media (min-width:992px) {
+
+.navbar--fixed .navbar__nav{
+                padding: 5px 0
+        }
+    }
+
+.navbar--fixed .navbar__mobile-buttons{
+        top: 4px;
+    }
+
+.navbar--fixed .navbar__logo img{
         max-width: 200px;
+
+    }
+
+@media (min-width:992px) {
+
+.navbar--fixed .navbar__logo img{
+        max-width: 332px
+
+    }
     }
 
 .navbar__tagline{
@@ -2804,7 +2871,8 @@ p {
     }
 
 .navicon {
-    position:relative;
+    position:absolute;
+    right: 0;
     z-index:999;
     border:none;
     background-color:transparent;
@@ -2868,8 +2936,7 @@ p {
 
 .navicon--toggle + .navbar__top__left__phone-icon--on-toggle{
       display: inline-block;
-      position: fixed;
-      right: 30px;
+      right: 40px;
       color: #0f566d;
       z-index: 999;
     }

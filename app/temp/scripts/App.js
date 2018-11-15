@@ -12362,15 +12362,15 @@ var flky = new _flickity2.default('.banner__slider', {
   // so no excess scroll at beginning or end
   // has no effect if wrapAround is enabled
 
-  draggable: '>1',
+  draggable: true,
   // enables dragging & flicking
   // if at least 2 cells
 
-  dragThreshold: 3,
+  dragThreshold: 1,
   // number of pixels a user must scroll horizontally to start dragging
   // increase to allow more room for vertical scroll for touch devices
 
-  freeScroll: true,
+  freeScroll: false,
   // enables content to be freely scrolled and flicked
   // without aligning cells
 
