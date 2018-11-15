@@ -115,7 +115,7 @@
 	&__block {
 		
 		padding: 10px;
-		margin-bottom: 10px;
+		margin-bottom: 0px;
 
 		& span, & a {
 			display: block;

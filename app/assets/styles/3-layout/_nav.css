@@ -52,10 +52,15 @@
                         color: $orange;
                     }
                 }
-        }
-        @mixin atLarge {
-            color: #000;
-            padding: 12px 25px;
-        }
+           
+            @mixin atLarge {
+                color: #000;
+            }
+         }
+
+         @mixin atLarge {
+                color: #000;
+                padding: 12px 25px;
+            }
     }
 }

@@ -4,6 +4,10 @@
 	font-size:1em;
 	font-weight:700;
 	color: $primaryColor;
+
+	&--underline{
+		text-decoration: underline;
+	}
 	
 
 	&:hover {
