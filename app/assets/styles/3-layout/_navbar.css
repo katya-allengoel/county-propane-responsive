@@ -139,6 +139,10 @@
                 top: 0;
                 left: -100%;
             }
+
+            @mixin atMedium{
+                padding-top: 25px;
+            }
         }
 
         @mixin atLarge {
@@ -212,7 +216,7 @@
         max-width: 225px;
         
     @mixin atLarge{
-        max-width: 332px;
+        max-width: 324px;
     }
 
 }

@@ -60,7 +60,7 @@
 
          @mixin atLarge {
                 color: #000;
-                padding: 12px 25px;
+                padding: 12px 20px;
             }
     }
 }

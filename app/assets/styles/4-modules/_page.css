@@ -1,0 +1,57 @@
+.page {
+
+	&__header{
+		padding: 0 15px;
+		position: relative;
+
+		&__button{
+			    position: absolute;
+			    color: $primaryColor;
+			    bottom: 10px;
+			    right: 16px;
+			    font-size: 1.4em;
+			    transition: all ease 0.25s;
+			    & i {
+			    	transition: all ease 0.25s;
+			    }
+				
+				&:hover{
+					color: $orange;
+				}
+
+			    &:hover i{
+					transform: translateX(-5px);
+					
+			    }
+		}
+	}
+
+	&__main-content {
+	
+		& figure {
+			display: inline-block;
+			float: none;
+			clear: none;
+			margin: 0;
+			padding: 0;
+			width: 49%;
+
+			& img {
+				width: 100%;
+			}
+
+			@mixin atMedium{
+				display: inline;
+				float: right;
+				clear: both;
+				margin: 5px 5px 5px 30px;
+				width: 100%;
+				max-width: 267px;
+			}	
+		}
+	}
+
+
+}
+
+

@@ -50,6 +50,7 @@
 		}
 	}
 
+
 	&--outline-primary {
 		border:2px solid #007bff;
 		background-color:transparent;
@@ -84,6 +85,10 @@
 		background-color: #355392;
 	}
 
+	&--teal{
+		background-color: #02b6bd;
+	}
+
 	&--glare{
 		position: relative;
 		color: #ffffff;
@@ -115,6 +120,8 @@
 	&--full {
 		width:100%;
 	}
+
+	
 
 	&--large {
 		padding:16px 25px;

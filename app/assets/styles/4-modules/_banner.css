@@ -81,4 +81,31 @@
 		}
 	}
 
+	&--internal{
+		height: 40vh;
+		
+		& .banner__background {
+			opacity: 0.5;
+
+			@mixin atLarge{
+				opacity: 1;
+			}
+		}
+
+		& .banner__content{
+			background:transparent;
+
+			& h1 {
+			color: #ffffff;
+			text-transform: uppercase;
+			margin-top: 0;
+			font-weight: normal;
+			}
+
+			@mixin atMedium {
+				display: none;
+			}
+		}	
+	}
+
 }
