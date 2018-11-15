@@ -11,6 +11,7 @@
         &:focus {
             color:white;
 			opacity:0.8;
+
 			@mixin atMedium {
 				color:#000;
 			}
@@ -20,11 +21,16 @@
     &__toggle-icon {
         transition:all 0.3s ease;
         color: $primaryColor;
-      
-
+        position: absolute;
+        right: 7px;
+        top: 17px;
+        padding-bottom:5px;
+        
         
         @mixin atLarge{
-            
+            position: relative;
+            right: auto;
+            top: auto;
         }
         
     }

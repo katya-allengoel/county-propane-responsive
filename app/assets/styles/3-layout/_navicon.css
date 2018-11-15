@@ -56,5 +56,6 @@
       right: 40px;
       color: $primaryColor;
       z-index: 999;
+      padding-top: 5px;
     }
 }

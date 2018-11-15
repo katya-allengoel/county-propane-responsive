@@ -14,11 +14,11 @@
   		background-size: cover;
 	}
 
-	
 
 }
 
 .flickity-page-dots{
+	bottom: 25px;
 
 	@mixin atMedium{
 		bottom: -40px;
@@ -26,14 +26,24 @@
 }
 
 .flickity-page-dots .dot{
+	width: 16px;
+	height: 16px;
+	background-color: transparent;
+	border: 1px solid white;
+	opacity: 1;
+
+	@mixin atLarge{
 		border: 1px solid #0f566d;
-		background: transparent;
-		opacity: 1;
 		width: 12px;
 		height: 12px;
+		}
 	}
 
 .flickity-page-dots .dot.is-selected{
+	background-color: white;
+
+	@mixin atLarge{
 	background-color: #0f566d;
+	}
 }	
 

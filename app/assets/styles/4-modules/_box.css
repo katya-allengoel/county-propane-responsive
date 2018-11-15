@@ -30,7 +30,11 @@
         margin:0 0 20px 0;
         font-size:1.5em;
         font-weight:500;
-        color: #000;
+        color: $primaryColor;
+
+        @mixin atLarge{
+            color: #000;
+        }
     }
 
     &__text {
@@ -56,6 +60,7 @@
         background-color: rgba(15, 86, 109, 0.7);
         transition: all ease 0.25s;
         font-style: italic;
+        font-weight: 600;
 
         & i{
             transition: all ease 0.25s;

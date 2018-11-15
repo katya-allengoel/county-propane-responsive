@@ -13,14 +13,16 @@
 	    	justify-content: space-between;
 
 	    		&__box{
-					margin: 20px;
+					margin: 15px;
 					text-align: left;
 					width: auto;
 
-					@mixin atSmall{
-						
-						
+					&--buttons{
+						width: 100%;
+						text-align: center;
 					}
+
+					
 
 					&__list{
 						margin-top: 0px!important;
@@ -42,19 +44,6 @@
 
 						} 
 					}
-
-					& > img, & > a, & > &__image-link img{
-						display: block;
-						margin-bottom: 10px;
-						width: 100%;
-					}
-
-					& .btn{
-						max-width: 300px;
-					}
-
-
-
 			}
 		}
 	}
