@@ -81,6 +81,7 @@
               padding-top: 45px;
         margin-top: -30px;
         z-index: 999;
+        padding-bottom: 15px;
         }
     }
 
@@ -127,7 +128,7 @@
 
         @mixin atLarge {
             margin:0;
-            padding:5px 26px;
+            padding:2px 26px;
 			font-size:0.9em;
 			color: $primaryColor;
 

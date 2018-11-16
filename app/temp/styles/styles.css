@@ -2471,7 +2471,8 @@ p {
 .dropdown--is-open .dropdown__nav {
               padding-top: 45px;
         margin-top: -30px;
-        z-index: 999
+        z-index: 999;
+        padding-bottom: 15px
     }
     }
 
@@ -2526,7 +2527,7 @@ p {
 
 .dropdown__link {
             margin:0;
-            padding:5px 26px;
+            padding:2px 26px;
 			font-size:0.9em;
 			color: #0f566d
     }
@@ -3813,6 +3814,7 @@ p {
 .page__header__title {
 			    font-weight: normal;
 			    display: none;
+			    text-transform: uppercase;
 			}
 
 @media (min-width:768px) {
