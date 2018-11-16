@@ -1,0 +1,10 @@
+.accordion{
+padding-left: 10px
+
+	&__title {
+
+		& a{
+			color: $primaryColor;
+		}
+	}
+}
