@@ -12266,7 +12266,9 @@ __webpack_require__(9);
 
 __webpack_require__(10);
 
-var _MobileMenu = __webpack_require__(23);
+__webpack_require__(23);
+
+var _MobileMenu = __webpack_require__(24);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
@@ -14538,6 +14540,16 @@ return Flickity;
 
 /***/ }),
 /* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($) {
+
+$('.accordion').accordion();
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

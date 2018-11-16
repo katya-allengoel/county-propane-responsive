@@ -1,5 +1,13 @@
 .page {
 
+	a {
+		color: $orange;
+
+		&:hover{
+			color: $primaryColor;
+		}
+	}
+
 	&__header{
 		padding: 0 15px;
 		position: relative;
@@ -59,6 +67,7 @@
 			text-align: center;
 			background-color: $verylightgrey;
 			margin: 10px 0;
+			border: 2px solid $primaryColor;
 
 
 			& img {
@@ -71,6 +80,7 @@
 			}
 
 			@mixin atMedium{
+				border: none;
 				display: inline;
 				float: right;
 				clear: both;

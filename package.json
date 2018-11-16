@@ -4,6 +4,7 @@
   "dependencies": {
     "flickity": "^2.1.2",
     "font-awesome": "^4.7.0",
+    "jq-accordion": "^1.0.3",
     "jquery": "3.2.1",
     "jquery-smooth-scroll": "^2.2.0",
     "lazysizes": "^4.0.1",
