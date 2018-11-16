@@ -84,6 +84,10 @@
 	&--internal{
 		height: 40vh;
 		
+		@mixin atMedium{
+			height: 300px;
+		}
+		
 		& .banner__background {
 			opacity: 0.5;
 

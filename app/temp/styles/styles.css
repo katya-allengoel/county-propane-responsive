@@ -2207,23 +2207,6 @@ img {
 }
     }
 
-.page-title {
-    font-weight: normal;
-    display: none;
-}
-
-@media (min-width:768px) {
-
-.page-title {
-        display: block;
-        margin-top: 0;
-        border-bottom: 2px dotted #0f566d;
-        padding-bottom: 10px;
-        margin-bottom: 10px!important;
-        position: relative
-}
-    }
-
 h1,
 h2,
 h3,
@@ -2820,7 +2803,7 @@ p {
                 left: -100%;
             }
 
-@media (min-width:768px) {
+@media (min-width:992px) {
 
 .navbar__nav--is-open {
                 padding-top: 25px
@@ -2904,6 +2887,10 @@ p {
                 padding: 5px 0
         }
     }
+
+.navbar--fixed .navbar__nav--is-open{
+                padding-top: 40px;
+            }
 
 .navbar--fixed .navbar__mobile-buttons{
         top: 4px;
@@ -3126,6 +3113,13 @@ p {
 .banner--internal{
 		height: 40vh;	
 	}
+
+@media (min-width:768px) {
+
+.banner--internal{
+			height: 300px	
+	}
+    }
 
 .banner--internal .banner__background {
 			opacity: 0.5;
@@ -3783,7 +3777,8 @@ p {
 		position: relative;
 	}
 
-.page__header__button{
+.page__header__back-button {
+				display: none;
 			    position: absolute;
 			    color: #0f566d;
 			    bottom: 10px;
@@ -3793,33 +3788,68 @@ p {
 			    transition: all ease 0.25s;
 		}
 
-.page__header__button i {
+@media (min-width:768px) {
+
+.page__header__back-button {
+					display: inline-block
+		}
+    }
+
+.page__header__back-button i {
 			    	-webkit-transition: all ease 0.25s;
 			    	transition: all ease 0.25s;
 			    }
 
-.page__header__button:hover{
+.page__header__back-button:hover{
 					color: #b95e00;
 				}
 
-.page__header__button:hover i{
+.page__header__back-button:hover i{
 					-webkit-transform: translateX(-5px);
 					        transform: translateX(-5px);
 					
 			    }
 
+.page__header__title {
+			    font-weight: normal;
+			    display: none;
+			}
+
+@media (min-width:768px) {
+
+.page__header__title {
+			        display: block;
+			        margin-top: 0;
+			        border-bottom: 2px dotted #0f566d;
+			        padding-bottom: 10px;
+			        margin-bottom: 10px!important;
+			        position: relative
+			}
+    }
+
 .page__main-content figure {
-			display: inline-block;
+			display: block;
 			float: none;
 			clear: none;
 			margin: 0;
 			padding: 0;
-			width: 49%;	
+			width: 100%;
+			text-align: center;
+			background-color: #d8d8d9;
+			margin: 10px 0;	
 		}
 
 .page__main-content figure img {
-				width: 100%;
+				width: auto;
+				padding: 10px 0;
 			}
+
+@media (min-width:768px) {
+
+.page__main-content figure img {
+					padding: 0
+			}
+    }
 
 @media (min-width:768px) {
 
@@ -3829,7 +3859,8 @@ p {
 				clear: both;
 				margin: 5px 5px 5px 30px;
 				width: 100%;
-				max-width: 267px	
+				max-width: 267px;
+				background: transparent	
 		}
     }
 

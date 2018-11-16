@@ -140,7 +140,7 @@
                 left: -100%;
             }
 
-            @mixin atMedium{
+            @mixin atLarge{
                 padding-top: 25px;
             }
         }
@@ -202,8 +202,13 @@
     padding: 0;
         
         & .navbar__nav{
+
               @mixin atLarge{
                 padding: 5px 0;
+            }
+
+            &--is-open{
+                padding-top: 40px;
             }
         }
     
