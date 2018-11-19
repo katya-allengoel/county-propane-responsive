@@ -1,0 +1,46 @@
+.accordion{
+
+	margin: 20px 0;
+	
+	&__title{
+		padding: 5px 0;
+
+		& > a{
+			color: $primaryColor!important;
+			padding-left: 3px;
+		}
+
+		&:before{
+			content:'\f0d7';
+			font-family:'FontAwesome';
+			color: $lightgrey;
+			
+			display: inline-block;
+			transition: all ease 0.25s;
+		}
+
+		&.active {
+			& > a {
+				color: $orange!important;
+			}
+			
+			&:before {
+				transform: rotate(-180deg);
+			}
+		}
+	}
+
+	&__description {
+		padding: 15px;
+		background-color: $verylightgrey;
+		border-radius: 3px;
+		border-top: 2px solid $orange;
+
+		& p {
+			margin-top: 0;
+			font-size: 0.9em;
+		}
+	}
+
+
+}

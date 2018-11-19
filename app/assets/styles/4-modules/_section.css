@@ -37,6 +37,19 @@
 		}
 	}
 
+	&--center-on-mobile{
+
+		text-align: center;
+
+		& p {
+			text-align: left;
+		}
+
+		@mixin atLarge{
+			text-align: left;
+		}
+	}
+
 	&--gray {
 		background-color: #f1f1f2;
 	}
@@ -69,6 +82,15 @@
 	   background: linear-gradient(to bottom, rgba(92,140,155,1) 0%,rgba(255,255,255,0.6) 40%,rgba(255,255,255,0) 100%); 
 	   background-repeat-y: no-repeat;
 	   background-size: 100% 500px;
+	   padding-top: 55px;
+
+	   @mixin atSmall{
+	   	padding-top: 75px;
+	   }
+
+	   @mixin atLarge{
+	   	padding-top: 218px;
+	   }
 
 	}
 
