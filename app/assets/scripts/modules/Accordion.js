@@ -4,21 +4,27 @@ function openFirstPanel(){
 
 (function($) {
     
-  var allPanels = $('.accordion > .accordion__description').hide();
+  var allDescriptions = $('.accordion > .accordion__description').hide();
+  var allTitles = $('.accordion > .accordion__title');
   
-  openFirstPanel();
+ // openFirstPanel();
     
   $('.accordion > .accordion__title > a').click(function(e) {
   	e.preventDefault();
-  	console.log($(this).text());
-      var $target =  $(this).parent().next();
+  	
+      var $description =  $(this).parent().next();
+      var $title = $(this).parent();
       
     
-      if($target.hasClass('active')){
-        $target.removeClass('active').slideUp(); 
+      if($description.hasClass('active')){
+        $description.removeClass('active').slideUp();
+        $title.removeClass('active');
+        
       }else{
-        allPanels.removeClass('active').slideUp();
-        $target.addClass('active').slideDown();
+        allDescriptions.removeClass('active').slideUp();
+        allTitles.removeClass('active');
+        $description.addClass('active').slideDown();
+        $title.addClass('active');
       }
       
     return false;

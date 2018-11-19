@@ -12266,7 +12266,9 @@ __webpack_require__(9);
 
 __webpack_require__(10);
 
-var _MobileMenu = __webpack_require__(23);
+__webpack_require__(23);
+
+var _MobileMenu = __webpack_require__(24);
 
 var _MobileMenu2 = _interopRequireDefault(_MobileMenu);
 
@@ -14538,6 +14540,45 @@ return Flickity;
 
 /***/ }),
 /* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function($, jQuery) {
+
+function openFirstPanel() {
+  $('.accordion > .accordion__title:first-child').next().addClass('active').slideDown();
+}
+
+(function ($) {
+
+  var allDescriptions = $('.accordion > .accordion__description').hide();
+  var allTitles = $('.accordion > .accordion__title');
+
+  // openFirstPanel();
+
+  $('.accordion > .accordion__title > a').click(function (e) {
+    e.preventDefault();
+
+    var $description = $(this).parent().next();
+    var $title = $(this).parent();
+
+    if ($description.hasClass('active')) {
+      $description.removeClass('active').slideUp();
+      $title.removeClass('active');
+    } else {
+      allDescriptions.removeClass('active').slideUp();
+      allTitles.removeClass('active');
+      $description.addClass('active').slideDown();
+      $title.addClass('active');
+    }
+
+    return false;
+  });
+})(jQuery);
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(2)))
+
+/***/ }),
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

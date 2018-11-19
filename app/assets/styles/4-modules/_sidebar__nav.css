@@ -10,6 +10,10 @@
 		border-bottom: 1px solid #d8d8d9;
 		line-height: unset;
 		margin-bottom: 0;
+		
+		&:before{
+			content: none!important;
+		}
 
 		& > a {
 			color: $primaryColor;

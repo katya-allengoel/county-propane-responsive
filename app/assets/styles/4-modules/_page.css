@@ -1,6 +1,6 @@
 .page {
 
-	a {
+	& a {
 		color: $orange;
 
 		&:hover{
@@ -15,7 +15,7 @@
 		&__back-button {
 				display: none;
 			    position: absolute;
-			    color: $primaryColor;
+			    color: $primaryColor!important;
 			    bottom: 10px;
 			    right: 16px;
 			    font-size: 1.4em;
@@ -30,7 +30,7 @@
 			    }
 				
 				&:hover{
-					color: $orange;
+					color: $orange!important;
 				}
 
 			    &:hover i{
@@ -92,6 +92,65 @@
 		}
 	}
 
+	& ul{
+		& li{
+			list-style: none;
+
+			&:before{
+				content: '\f111';
+				font-family: FontAwesome;
+				color: $primaryColor;
+				font-size: 10px;
+				margin-right: 10px;
+				position: relative;
+				bottom: 3px;
+			}
+		}
+	}
+
+	& blockquote{
+		background-color: $verylightgrey;
+		border: none;
+		padding: 30px;
+		border-radius: 5px;
+		margin: 50px 0;
+		
+		@mixin atMedium{
+			padding: 40px;
+		}
+
+
+		& h1, & h2, & h3, & h4, & h5, & h6 {
+			margin-top: 0;
+		}
+
+		& ol, & ul {
+			margin-bottom: 0;
+		}
+
+		& ol {
+			list-style: none;
+			counter-reset: counter;
+
+			& li {
+				counter-increment: counter;
+
+
+				&:before{
+					content: counter(counter);
+					color: $primaryColor;
+					font-weight: bold;
+					margin-right: 10px;
+
+				}
+			}
+
+		& ul {
+			list-style: none;
+			}
+		}
+
+	}
 
 }
 
