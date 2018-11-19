@@ -1,0 +1,30 @@
+.sidebar__nav{
+
+	text-align: center;
+	font-size: 1.3em;
+	margin-bottom: 30px;
+	margin-top: 0;
+
+	& > li {
+		padding-left: 0;
+		border-bottom: 1px solid #d8d8d9;
+		line-height: unset;
+		margin-bottom: 0;
+		
+		&:before{
+			content: none!important;
+		}
+
+		& > a {
+			color: $primaryColor;
+			text-transform: uppercase;
+			padding: 15px 0;
+			display: block;
+
+			&.active, &:active, &:hover, &:focus{
+				background-color: $primaryColor;
+				color: #fff;
+			}
+		}
+	}
+}

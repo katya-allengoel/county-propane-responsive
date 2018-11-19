@@ -16,6 +16,7 @@ h6 {
     color:$primaryColor;
     font-weight:800;
     font-family: $primaryFont;
+
 }
 
 h1,
@@ -23,9 +24,11 @@ h1,
     font-size:2em;
     text-transform: uppercase;
     letter-spacing: -1px;
+ 
     @mixin atMedium {
-        font-size:3em;
+        font-size:2.5em;
     }
+   
 }
 
 h2,

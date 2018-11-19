@@ -4,7 +4,6 @@ body {
     font-family: $primaryFont; 
 }
 
- 
 
 a,
 button {
@@ -18,3 +17,12 @@ a:hover {
 img {
     max-width:100%;
 }
+
+.show-on-mobile{
+	display: inline-block;
+
+	@mixin atLarge {
+		display: none!important;
+	}
+}
+

@@ -1,0 +1,157 @@
+.page {
+
+	& a {
+		color: $orange;
+
+		&:hover{
+			color: $primaryColor;
+		}
+	}
+
+	&__header{
+		padding: 0 15px;
+		position: relative;
+
+		&__back-button {
+				display: none;
+			    position: absolute;
+			    color: $primaryColor!important;
+			    bottom: 10px;
+			    right: 16px;
+			    font-size: 1.4em;
+			    transition: all ease 0.25s;
+				
+				@mixin atMedium{
+					display: inline-block;
+				}
+
+			    & i {
+			    	transition: all ease 0.25s;
+			    }
+				
+				&:hover{
+					color: $orange!important;
+				}
+
+			    &:hover i{
+					transform: translateX(-5px);
+					
+			    }
+		}
+
+		&__title {
+			    font-weight: normal;
+			    display: none;
+			    text-transform: uppercase;
+
+			    @mixin atMedium {
+			        display: block;
+			        margin-top: 0;
+			        border-bottom: 2px dotted $primaryColor;
+			        padding-bottom: 10px;
+			        margin-bottom: 10px!important;
+			        position: relative;
+			    }
+			}
+	}
+
+	&__main-content {
+	
+		& figure {
+			display: block;
+			float: none;
+			clear: none;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+			text-align: center;
+			background-color: $verylightgrey;
+			margin: 10px 0;
+			border: 2px solid $primaryColor;
+
+
+			& img {
+				width: auto;
+				padding: 10px 0;
+
+				@mixin atMedium{
+					padding: 0;
+				}
+			}
+
+			@mixin atMedium{
+				border: none;
+				display: inline;
+				float: right;
+				clear: both;
+				margin: 5px 5px 5px 30px;
+				width: 100%;
+				max-width: 267px;
+				background: transparent;
+			}	
+		}
+	}
+
+	& ul{
+		& li{
+			list-style: none;
+
+			&:before{
+				content: '\f111';
+				font-family: FontAwesome;
+				color: $primaryColor;
+				font-size: 10px;
+				margin-right: 10px;
+				position: relative;
+				bottom: 3px;
+			}
+		}
+	}
+
+	& blockquote{
+		background-color: $verylightgrey;
+		border: none;
+		padding: 30px;
+		border-radius: 5px;
+		margin: 50px 0;
+		
+		@mixin atMedium{
+			padding: 40px;
+		}
+
+
+		& h1, & h2, & h3, & h4, & h5, & h6 {
+			margin-top: 0;
+		}
+
+		& ol, & ul {
+			margin-bottom: 0;
+		}
+
+		& ol {
+			list-style: none;
+			counter-reset: counter;
+
+			& li {
+				counter-increment: counter;
+
+
+				&:before{
+					content: counter(counter);
+					color: $primaryColor;
+					font-weight: bold;
+					margin-right: 10px;
+
+				}
+			}
+
+		& ul {
+			list-style: none;
+			}
+		}
+
+	}
+
+}
+
+

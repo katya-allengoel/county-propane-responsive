@@ -37,6 +37,19 @@
 		}
 	}
 
+	&--center-on-mobile{
+
+		text-align: center;
+
+		& p {
+			text-align: left;
+		}
+
+		@mixin atLarge{
+			text-align: left;
+		}
+	}
+
 	&--gray {
 		background-color: #f1f1f2;
 	}
