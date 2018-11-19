@@ -67,7 +67,7 @@
 			text-align: center;
 			background-color: $verylightgrey;
 			margin: 10px 0;
-			border: 2px solid $primaryColor;
+			border: 2px solid $lightgrey;
 
 
 			& img {
@@ -89,6 +89,18 @@
 				max-width: 267px;
 				background: transparent;
 			}	
+		}
+
+		& h1, & h2, & h3, & h4, & h5, & h6 {
+			font-weight: 500;
+
+			 @mixin atMedium {
+			        display: block;
+			        border-bottom: 2px dotted $primaryColor;
+			        padding-bottom: 10px;
+			        margin-bottom: 10px!important;
+			        position: relative;
+			    }
 		}
 	}
 
@@ -122,6 +134,7 @@
 
 		& h1, & h2, & h3, & h4, & h5, & h6 {
 			margin-top: 0;
+			border-bottom: none;
 		}
 
 		& ol, & ul {

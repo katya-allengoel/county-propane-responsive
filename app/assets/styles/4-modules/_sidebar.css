@@ -1,11 +1,11 @@
 .sidebar {
 	width: 100%;
-	margin-top: 50px;
+	padding: 0 5px;
 	
 
 	@mixin atSmall {
 		max-width: 400px;
-		margin: 50px auto 0 auto;
+		margin: 0 auto;
 	}
 
 	@mixin atLarge {
@@ -17,10 +17,44 @@
 		width: 100%;
 		display: inline-block;
 		color: #fff;
+		min-width: 0;
+
+			& i {
+				font-weight: 400;
+
+			@mixin atMedium{	
+				display: none;
+			}
+
+			@mixin atXLarge{
+				display: block;
+			}
+		}
 
 		&:hover{
 			color: #fff;
 		}
+
+		&--icon-left {
+
+			@mixin atMedium{
+				padding-left: 65px;
+			}
+
+			@mixin atLarge{
+
+			}
+
+		& img{
+
+			@mixin atMedium{
+			max-height: 28px;
+		}
+			@mixin atLarge{
+				
+			}
+		}
+	}
 	}
 
 	& figure {

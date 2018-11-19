@@ -14556,11 +14556,11 @@ function openFirstPanel() {
 
   // openFirstPanel();
 
-  $('.accordion > .accordion__title > a').click(function (e) {
+  $('.accordion > .accordion__title').click(function (e) {
     e.preventDefault();
 
-    var $description = $(this).parent().next();
-    var $title = $(this).parent();
+    var $description = $(this).next();
+    var $title = $(this);
 
     if ($description.hasClass('active')) {
       $description.removeClass('active').slideUp();

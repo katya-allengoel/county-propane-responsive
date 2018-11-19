@@ -18,7 +18,11 @@
 }
 
 .flickity-page-dots{
-	bottom: 25px;
+	bottom: 18px;
+
+	@mixin atSmall {
+		bottom: 25px;
+	}
 
 	@mixin atMedium{
 		bottom: -40px;

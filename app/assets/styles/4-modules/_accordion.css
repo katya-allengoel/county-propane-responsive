@@ -4,6 +4,8 @@
 	
 	&__title{
 		padding: 5px 0;
+		border-bottom: 1px solid $verylightgrey;
+		transition: all ease 0.25s;
 
 		& > a{
 			color: $primaryColor!important;
@@ -13,13 +15,17 @@
 		&:before{
 			content:'\f0d7';
 			font-family:'FontAwesome';
-			color: $lightgrey;
+			color: $orange;
+			border: 1px solid $orange;
+			padding: 2px 9px;
 			
 			display: inline-block;
 			transition: all ease 0.25s;
 		}
 
 		&.active {
+			border-bottom: 2px solid $orange;
+
 			& > a {
 				color: $orange!important;
 			}
@@ -34,7 +40,7 @@
 		padding: 15px;
 		background-color: $verylightgrey;
 		border-radius: 3px;
-		border-top: 2px solid $orange;
+		
 
 		& p {
 			margin-top: 0;

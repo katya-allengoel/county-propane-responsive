@@ -114,7 +114,7 @@
     }
 
     &__link {
-        color: $lightgrey;
+        color: $grey;
         font-size:0.95em;
         font-weight:400;
         display:block;
@@ -122,11 +122,11 @@
 
         &:hover,
         &:focus {
-            color:$lightgrey;
-            opacity:0.5;
+            color:$orange;   
+            opacity:0.8;
         }
 
-        @mixin atLarge {
+        @mixin atLarge {    
             margin:0;
             padding:2px 26px;
 			font-size:0.9em;
